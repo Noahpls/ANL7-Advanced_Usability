@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e8d30369-1e62-47ea-82e9-b3abb4e4b72d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BSgenerator.py</StartupFile>
+    <StartupFile>BSgenerator2.0.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BSgenerator.py" />
+    <Compile Include="BSgenerator2.0.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
