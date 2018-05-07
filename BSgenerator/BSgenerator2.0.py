@@ -2,6 +2,15 @@ from random import randint
 import os
 clear = lambda:os.system('cls')
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 strings = [
   ["Het proces ", "De factor mens ", "Het management ", "De communicatie ", "De kerncompetentie ", "Human capital ", "De organisatie-ontwikkeling ", "De missie ", "Kennismanagement ", "De eerste aanzet "],
@@ -16,14 +25,34 @@ strings = [
 
 res = ""
 
-for str1 in strings:
+def showProgress():
   if res != "":
-    print("Uw kunstwerk tot nu toe:\n" + res + "\n \n")
-  question = "Kies uit:\n"
-  for str2 in str1:
-    question += "|[" + str(str1.index(str2)) + "] " + str2 + "\n"
-  answer = int(input(question))
-  res += str1[answer]
-  clear()
-print("Resultaat:\n" + res)
+    return "Uw kunstwerk tot nu toe:\n" + res + "\n \n"
+  else:
+    return ""
 
+def askQuestion():
+  while True:
+    try:
+      answer = int(input(questionStr))
+    except ValueError:
+      clear()
+      print(bcolors.FAIL + "Vul een nummer tussen 0 en " + str(len(str1)-1) + " in" + bcolors.ENDC)
+      continue
+
+    if len(str1)-1 >= answer >= 0:
+      break
+
+    else:
+      clear()
+      print(bcolors.FAIL + "Vul een nummer tussen 0 en " + str(len(str1)-1) + " in" + bcolors.ENDC)
+      continue
+  return answer
+
+for str1 in strings:
+  questionStr = showProgress() + "Kies uit:\n"
+  for str2 in str1:
+    questionStr += str(str1.index(str2)) + "| " + str2 + "\n"
+  res += str1[askQuestion()]
+  clear()
+print(bcolors.UNDERLINE + "Resultaat:\n" + bcolors.ENDC + res)
