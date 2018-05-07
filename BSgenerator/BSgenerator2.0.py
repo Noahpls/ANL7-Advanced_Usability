@@ -4,12 +4,7 @@ clear = lambda:os.system('cls')
 
 class bcolors:
     HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
     ENDC = '\033[0m'
-    BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
 strings = [
@@ -37,7 +32,7 @@ def askQuestion():
       answer = int(input(questionStr))
     except ValueError:
       clear()
-      print(bcolors.FAIL + "Vul een nummer tussen 0 en " + str(len(str1)-1) + " in" + bcolors.ENDC)
+      print(bcolors.HEADER + "Vul een nummer tussen 0 en " + str(len(str1)-1) + " in" + bcolors.ENDC)
       continue
 
     if len(str1)-1 >= answer >= 0:
@@ -45,7 +40,7 @@ def askQuestion():
 
     else:
       clear()
-      print(bcolors.FAIL + "Vul een nummer tussen 0 en " + str(len(str1)-1) + " in" + bcolors.ENDC)
+      print(bcolors.HEADER + "Vul een nummer tussen 0 en " + str(len(str1)-1) + " in" + bcolors.ENDC)
       continue
   return answer
 
