@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BSgenerator", "BSgenerator\BSgenerator.pyproj", "{E8D30369-1E62-47EA-82E9-B3ABB4E4B72D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StudievoorlichtingsBot", "StudievoorlichtingsBot\StudievoorlichtingsBot.pyproj", "{1D2EAB8B-8656-43AB-BBF0-B5922ACC542D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ParrotBot", "ParrotBot\ParrotBot.pyproj", "{EC0D53E6-BAED-411E-9EAD-1F6D8B4B220C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E8D30369-1E62-47EA-82E9-B3ABB4E4B72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E8D30369-1E62-47EA-82E9-B3ABB4E4B72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D2EAB8B-8656-43AB-BBF0-B5922ACC542D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D2EAB8B-8656-43AB-BBF0-B5922ACC542D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0D53E6-BAED-411E-9EAD-1F6D8B4B220C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0D53E6-BAED-411E-9EAD-1F6D8B4B220C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
