@@ -6,7 +6,7 @@
     <ProjectGuid>e8d30369-1e62-47ea-82e9-b3abb4e4b72d</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>BSgenerator.py</StartupFile>
+    <StartupFile>BSgenerator2.0.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

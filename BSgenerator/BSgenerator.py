@@ -1,5 +1,6 @@
 from random import randint
 from strings import strings
+
 res = ""
 
 for str in strings:
