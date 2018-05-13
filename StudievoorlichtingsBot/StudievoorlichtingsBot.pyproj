@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="dictionary.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="StudievoorlichtingsBot.py" />
   </ItemGroup>
   <PropertyGroup>
