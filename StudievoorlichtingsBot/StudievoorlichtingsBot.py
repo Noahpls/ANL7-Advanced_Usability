@@ -23,6 +23,7 @@ def askQuestion(questionStr, followUpQuestion=[]): #followUpQuestion seems a lit
       #if a keyword is found, exit the loop and return the found keyword
       if bool(re.search(keyword, answer.lower())):
         foundKeywords.append(keyword)
+    #if the input doesn't contain any know keywords, continue in this loop and change the questionStr to the standard answer
     if foundKeywords == []:
       questionStr = idkAnswer
       chatHistory.extend([formatText(botName, questionStr, True)])
@@ -59,7 +60,8 @@ def main():
     questionStr = ""
     #for each keyword in the input add the response to the questionStr
     for keyword in inputKeywords:
-      questionStr+= (dictionary[keyword])+"\n "
+      questionStr+= (dictionary[keyword])+"\n"
+    questionStr+= formatText(botName, "Heeft u verder nog vragen?", True)
     #if the endKeyword is called in the input, the chat will be ended with the response to the other keywords
     if endKeyword in inputKeywords:
       clear()
