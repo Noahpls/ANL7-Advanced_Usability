@@ -1,3 +1,5 @@
+endKeyword = "endchat" #in case you (for some weird reason) were to end the conversationn
+
 dictionary = {
 		"informatie" : """We leiden je op tot software engineer. Je gaat aan de slag met het ontwikkelen van software voor diverse toepassingen. Je bent in staat complexe ICT-systemen te analyseren, ontwerpen en implementeren.
 
@@ -6,7 +8,8 @@ Software is overal om ons heen te vinden. Jij bent de specialist in het maken va
 Na het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als programmeur of applicatieontwikkelaar kun je verder groeien binnen de ICT.
 
 Ben jij geïnteresseerd in nieuwe techno logische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!""",
-		"endchat" : "waow",
-		"slecht" : "Informatica is niks voor jou, shoo shoo"
+		"slecht" : "Informatica is niks voor jou, shoo shoo",
+    "help" : "Ik ben niet zo goed in helpen",
+    endKeyword : ""
 	}
  
