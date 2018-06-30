@@ -1,6 +1,6 @@
 import re
 import os
-from dictionary import * #<-- importeert dictionary en endKeyword
+from dictionary import * #<-- imports dictionary and endKeyword
 clear = lambda:os.system('cls')
 
 botName = "BOT"
@@ -18,28 +18,28 @@ def askQuestion(questionStr, followUpQuestion=[]): #followUpQuestion seems a lit
     formattedAnswer = formatText(userName, answer, True)
     chatHistory.extend([formattedQuestion, formattedAnswer])
 
-    #iterates through all of the keys in the dictionary
+    #Iterates through all of the keys in the dictionary
     for keyword in list(dictionary.keys()):
-      #if a keyword is found, exit the loop and return the found keyword
+      #If a keyword is found, exit the loop and return the found keyword
       if bool(re.search(keyword, answer.lower())):
         foundKeywords.append(keyword)
-    #if the input doesn't contain any know keywords, continue in this loop and change the questionStr to the standard answer
+    #If the input doesn't contain any know keywords, continue in this loop and change the questionStr to the standard answer
     if foundKeywords == []:
       questionStr = idkAnswer
-      chatHistory.extend([formatText(botName, questionStr, True)])
+      #chatHistory.extend([formatText(botName, questionStr, True)])
       continue
-    break
+    else:
+      break
   return foundKeywords
-  #return keyword
 
-#shockingly enough displays the chat history
+#Shockingly enough displays the chat history
 def showChatHistory(lastFamousWords=""):
   print("Chat:")
   for line in chatHistory:
     print(line)
   print(lastFamousWords)
 
-#prints (or returns, if needed) the message with the name of the person who sent the message in a nice way
+#Prints (or returns, if needed) the message with the name of the person who sent the message in a nice way
 def formatText(name, text, ret=False):
   formattedText = '{:<4s} {:<1s}'.format(name, "| " + text)
   if ret == True:
@@ -52,17 +52,17 @@ def main():
   questionStr = standardQuestion
   inputKeywords = ""
   while True:
-    showChatHistory()
     clear()
     if questionStr == idkAnswer:
         questionStr =  standardQuestion
     inputKeywords = askQuestion(questionStr)
     questionStr = ""
-    #for each keyword in the input add the response to the questionStr
+    #For each keyword in the input add the response to the questionStr
     for keyword in inputKeywords:
+      #chatHistory
       questionStr+= (dictionary[keyword])+"\n"
     questionStr+= formatText(botName, "Heeft u verder nog vragen?", True)
-    #if the endKeyword is called in the input, the chat will be ended with the response to the other keywords
+    #If the endKeyword is called in the input, the chat will be ended with the response to the other keywords
     if endKeyword in inputKeywords:
       clear()
       showChatHistory(questionStr)
